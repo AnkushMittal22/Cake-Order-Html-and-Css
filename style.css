@@ -1,0 +1,284 @@
+/* Import Google font - Poppins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.first {
+  display: flex;
+  gap: 1rem;
+}
+.first .firstDiv {
+  display: flex;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+.first .firstDiv i {
+  font-size: 1.5rem;
+}
+
+.second {
+  display: flex;
+}
+.second input {
+  padding: 0.5rem 4rem;
+  border: none;
+  background-color: rgb(247, 247, 247);
+}
+.second span {
+  padding-top: 1rem;
+}
+
+.third {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+.third .icon {
+  text-align: center;
+}
+
+@media (max-width: 874px) {
+  .mainHeader {
+    position: relative;
+  }
+  .hamburger {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+  }
+  .first {
+    padding-left: 2rem;
+  }
+  .second input {
+    display: none;
+  }
+  .third .wallet {
+    display: none;
+  }
+  .third .login {
+    display: none;
+  }
+  .third .more {
+    display: none;
+  }
+}
+@media (max-width: 501px) {
+  .first img {
+    width: 5rem;
+    padding-top: 0.6rem;
+  }
+  .first .firstDiv {
+    padding-top: 1.2rem;
+  }
+  .first .firstDiv i {
+    font-size: 0.8rem;
+  }
+  .first .firstDiv h2 {
+    font-size: 1rem;
+  }
+  .second i {
+    font-size: 0.8rem;
+  }
+  .third i {
+    font-size: 0.8rem;
+  }
+  .third span {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 342px) {
+  .first img {
+    width: 3rem;
+    margin-top: 0.6rem;
+  }
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.456);
+}
+
+.nav-links a {
+  color: black;
+}
+
+/* LOGO */
+ul {
+  margin-left: 8rem;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 4em;
+}
+.menu li {
+  padding: 5px 14px;
+}
+.menu li:hover {
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+/* RESPONSIVE NAVBAR MENU STARTS */
+/* CHECKBOX HACK */
+input[type=checkbox] {
+  display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 1163px) {
+  .menu {
+    display: flex;
+    gap: 2em;
+    font-size: 15px;
+  }
+  ul {
+    margin-left: 8rem;
+  }
+}
+@media (max-width: 949px) {
+  ul {
+    margin-left: 3rem;
+  }
+}
+@media (max-width: 871px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  .navbar {
+    border-bottom: none;
+  }
+}
+
+/* PHOTO SECTION */
+
+section {
+  display: flex;
+  padding: 0 35px;
+  min-height: 60vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover {
+  background: #f2f2f2;
+}
+.wrapper i:first-child {
+  left: -22px;
+  display: none;
+}
+.wrapper i:last-child {
+  right: -22px;
+}
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.wrapper .carousel .dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.wrapper .carousel .dragging img {
+  pointer-events: none;
+}
+.wrapper .carousel img {
+  height: 340px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: 33.3333333333%;
+  border-radius: 1rem;
+}
+.wrapper .carousel img:first-child {
+  margin-left: 0px;
+}
+
+/*APPLYING MEDIA QUERY */
+
+@media screen and (max-width: 900px) {
+  .carousel img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .carousel img {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
